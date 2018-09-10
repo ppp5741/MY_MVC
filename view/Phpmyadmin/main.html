@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)<?=__PUBLIC__.'phpmyadmin/'?>main.php?token=b7534a2f84aac02c07d2f166ae0e88a9 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="<?=__PUBLIC__.'phpmyadmin/'?>favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?=__PUBLIC__.'phpmyadmin/'?>favicon.ico" type="image/x-icon">
+    <title>phpMyAdmin</title>
+    <link rel="stylesheet" type="text/css" href="<?=__PUBLIC__.'phpmyadmin/'?>phpmyadmin.css">
+    <link rel="stylesheet" type="text/css" href="<?=__PUBLIC__.'phpmyadmin/'?>print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="<?=__PUBLIC__.'phpmyadmin/'?>jquery-ui-1.8.16.custom.css">
+    <meta name="robots" content="noindex,nofollow">
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>cross_framing_protection.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery-1.6.2+fix-9521.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery-ui-1.8.16.custom.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>update-location.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery.sprintf.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>config.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>functions.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery.qtip-1.0.0-rc3.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>message.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>get_image.js" type="text/javascript"></script>
+<script type="text/javascript">
+// <![CDATA[
+if (typeof(parent.document) != 'undefined' && typeof(parent.document) != 'unknown'
+    && typeof(parent.document.title) == 'string') {
+    parent.document.title = 'localhost / localhost | phpMyAdmin phpStudy 2014';
+}
+// ]]>
+</script>
+        <meta name="OBGZip" content="true">
+                <!--[if IE 6]>
+        <style type="text/css">
+        /* <![CDATA[ */
+        html {
+            overflow-y: scroll;
+        }
+        /* ]]> */
+        </style>
+        <![endif]-->
+    </head>
+
+    <body style="padding-top: 60px;">
+            <div id="prefs_autoload" class="notice" style="display:none">
+        <form action="<?=__PUBLIC__.'phpmyadmin/'?>prefs_manage.php" method="post">
+            <input type="hidden" name="token" value="b7534a2f84aac02c07d2f166ae0e88a9">
+            <input type="hidden" name="json" value="">
+            <input type="hidden" name="submit_import" value="1">
+            <input type="hidden" name="return_url" value="main.php?token=b7534a2f84aac02c07d2f166ae0e88a9">
+            你的浏览器中有当前域的 phpMyAdmin 设置。是否导入到当前会话中？            <br>
+            <a href="<?=__PUBLIC__.'phpmyadmin/'?>main.php?token=b7534a2f84aac02c07d2f166ae0e88a9#yes">是</a> / <a href="<?=__PUBLIC__.'phpmyadmin/'?>main.php?token=b7534a2f84aac02c07d2f166ae0e88a9#no">否</a>
+        </form>
+    </div>
+    <div id="floating_menubar" style="position: fixed; top: 0px; left: 0px; width: 100%; z-index: 500;"><div id="serverinfo">
+<img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_host item">
+<a href="<?=__PUBLIC__.'phpmyadmin/'?>main.php?token=b7534a2f84aac02c07d2f166ae0e88a9" class="item">localhost</a>
+<div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><ul id="topmenu"><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_databases.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_db">数据库</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_sql.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_b_sql">SQL</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_status.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_status">状态</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_privileges.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_rights">用户</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_export.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_b_export">导出</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_import.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_b_import">导入</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>prefs_manage.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_b_tblops">设置</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_synchronize.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_sync">同步</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_replication.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_replication">复制</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_variables.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_vars">变量</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_collations.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_s_asci">字符集</a></li><li><a class="tab" href="<?=__PUBLIC__.'phpmyadmin/'?>server_engines.php?token=b7534a2f84aac02c07d2f166ae0e88a9"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="" alt="" class="icon ic_b_engine">引擎</a></li><li class="submenu" style=""><a href="<?=__PUBLIC__.'phpmyadmin/'?>main.php?token=b7534a2f84aac02c07d2f166ae0e88a9#" class="tab"><img alt="" title="" src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" class="icon ic_b_more">更多</a><ul class="notonly"></ul></li></ul>
+<div class="clearfloat"></div></div></div>
+
+<div id="maincontainer">
+<div id="main_pane_left"><div class="group"><h2>常规设置</h2><ul><li id="li_change_password"><a href="<?=__PUBLIC__.'phpmyadmin/'?>user_password.php?token=b7534a2f84aac02c07d2f166ae0e88a9" id="change_password_anchor" class="ajax">修改密码</a>
+</li>    <li id="li_select_mysql_collation">        <form method="post" action="<?=__PUBLIC__.'phpmyadmin/'?>index.php" target="_parent">
+<input type="hidden" name="token" value="b7534a2f84aac02c07d2f166ae0e88a9">            <label for="select_collation_connection">
+                服务器连接校对
+<a href="<?=__PUBLIC__.'phpmyadmin/'?>url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.5%2Fen%2Fcharset-connection.html&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="mysql_doc"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="文档" alt="文档" class="icon ic_b_help"></a>: 
+            </label>
+<select xml:lang="en" dir="ltr" name="collation_connection" id="select_collation_connection" class="autosubmit">
+<option value="">整理</option>
+<option value=""></option>
+<optgroup label="armscii8" title="ARMSCII-8 Armenian">
+<option value="armscii8_bin" title="亚美尼亚语, 二进制">armscii8_bin</option>
+<option value="armscii8_general_ci" title="亚美尼亚语, 不区分大小写">armscii8_general_ci</option>
+</optgroup>
+<optgroup label="ascii" title="US ASCII">
+<option value="ascii_bin" title="西欧 (多语言), 二进制">ascii_bin</option>
+<option value="ascii_general_ci" title="西欧 (多语言), 不区分大小写">ascii_general_ci</option>
+</optgroup>
+<optgroup label="big5" title="Big5 Traditional Chinese">
+<option value="big5_bin" title="正体中文, 二进制">big5_bin</option>
+<option value="big5_chinese_ci" title="正体中文, 不区分大小写">big5_chinese_ci</option>
+</optgroup>
+<optgroup label="binary" title="Binary pseudo charset">
+<option value="binary" title="二进制">binary</option>
+</optgroup>
+<optgroup label="cp1250" title="Windows Central European">
+<option value="cp1250_bin" title="中欧 (多语言), 二进制">cp1250_bin</option>
+<option value="cp1250_croatian_ci" title="克罗地亚语, 不区分大小写">cp1250_croatian_ci</option>
+<option value="cp1250_czech_cs" title="捷克语, 区分大小写">cp1250_czech_cs</option>
+<option value="cp1250_general_ci" title="中欧 (多语言), 不区分大小写">cp1250_general_ci</option>
+<option value="cp1250_polish_ci" title="波兰语, 不区分大小写">cp1250_polish_ci</option>
+</optgroup>
+<optgroup label="cp1251" title="Windows Cyrillic">
+<option value="cp1251_bin" title="西里尔语 (多语言), 二进制">cp1251_bin</option>
+<option value="cp1251_bulgarian_ci" title="保加利亚语, 不区分大小写">cp1251_bulgarian_ci</option>
+<option value="cp1251_general_ci" title="西里尔语 (多语言), 不区分大小写">cp1251_general_ci</option>
+<option value="cp1251_general_cs" title="西里尔语 (多语言), 区分大小写">cp1251_general_cs</option>
+<option value="cp1251_ukrainian_ci" title="乌克兰语, 不区分大小写">cp1251_ukrainian_ci</option>
+</optgroup>
+<optgroup label="cp1256" title="Windows Arabic">
+<option value="cp1256_bin" title="阿拉伯语, 二进制">cp1256_bin</option>
+<option value="cp1256_general_ci" title="阿拉伯语, 不区分大小写">cp1256_general_ci</option>
+</optgroup>
+<optgroup label="cp1257" title="Windows Baltic">
+<option value="cp1257_bin" title="巴拉克语 (多语言), 二进制">cp1257_bin</option>
+<option value="cp1257_general_ci" title="巴拉克语 (多语言), 不区分大小写">cp1257_general_ci</option>
+<option value="cp1257_lithuanian_ci" title="立陶宛语, 不区分大小写">cp1257_lithuanian_ci</option>
+</optgroup>
+<optgroup label="cp850" title="DOS West European">
+<option value="cp850_bin" title="西欧 (多语言), 二进制">cp850_bin</option>
+<option value="cp850_general_ci" title="西欧 (多语言), 不区分大小写">cp850_general_ci</option>
+</optgroup>
+<optgroup label="cp852" title="DOS Central European">
+<option value="cp852_bin" title="中欧 (多语言), 二进制">cp852_bin</option>
+<option value="cp852_general_ci" title="中欧 (多语言), 不区分大小写">cp852_general_ci</option>
+</optgroup>
+<optgroup label="cp866" title="DOS Russian">
+<option value="cp866_bin" title="俄语, 二进制">cp866_bin</option>
+<option value="cp866_general_ci" title="俄语, 不区分大小写">cp866_general_ci</option>
+</optgroup>
+<optgroup label="cp932" title="SJIS for Windows Japanese">
+<option value="cp932_bin" title="日语, 二进制">cp932_bin</option>
+<option value="cp932_japanese_ci" title="日语, 不区分大小写">cp932_japanese_ci</option>
+</optgroup>
+<optgroup label="dec8" title="DEC West European">
+<option value="dec8_bin" title="西欧 (多语言), 二进制">dec8_bin</option>
+<option value="dec8_swedish_ci" title="瑞典语, 不区分大小写">dec8_swedish_ci</option>
+</optgroup>
+<optgroup label="eucjpms" title="UJIS for Windows Japanese">
+<option value="eucjpms_bin" title="日语, 二进制">eucjpms_bin</option>
+<option value="eucjpms_japanese_ci" title="日语, 不区分大小写">eucjpms_japanese_ci</option>
+</optgroup>
+<optgroup label="euckr" title="EUC-KR Korean">
+<option value="euckr_bin" title="朝鲜语, 二进制">euckr_bin</option>
+<option value="euckr_korean_ci" title="朝鲜语, 不区分大小写">euckr_korean_ci</option>
+</optgroup>
+<optgroup label="gb2312" title="GB2312 Simplified Chinese">
+<option value="gb2312_bin" title="简体中文, 二进制">gb2312_bin</option>
+<option value="gb2312_chinese_ci" title="简体中文, 不区分大小写">gb2312_chinese_ci</option>
+</optgroup>
+<optgroup label="gbk" title="GBK Simplified Chinese">
+<option value="gbk_bin" title="简体中文, 二进制">gbk_bin</option>
+<option value="gbk_chinese_ci" title="简体中文, 不区分大小写">gbk_chinese_ci</option>
+</optgroup>
+<optgroup label="geostd8" title="GEOSTD8 Georgian">
+<option value="geostd8_bin" title="乔治亚语, 二进制">geostd8_bin</option>
+<option value="geostd8_general_ci" title="乔治亚语, 不区分大小写">geostd8_general_ci</option>
+</optgroup>
+<optgroup label="greek" title="ISO 8859-7 Greek">
+<option value="greek_bin" title="希腊语, 二进制">greek_bin</option>
+<option value="greek_general_ci" title="希腊语, 不区分大小写">greek_general_ci</option>
+</optgroup>
+<optgroup label="hebrew" title="ISO 8859-8 Hebrew">
+<option value="hebrew_bin" title="希伯来语, 二进制">hebrew_bin</option>
+<option value="hebrew_general_ci" title="希伯来语, 不区分大小写">hebrew_general_ci</option>
+</optgroup>
+<optgroup label="hp8" title="HP West European">
+<option value="hp8_bin" title="西欧 (多语言), 二进制">hp8_bin</option>
+<option value="hp8_english_ci" title="英语, 不区分大小写">hp8_english_ci</option>
+</optgroup>
+<optgroup label="keybcs2" title="DOS Kamenicky Czech-Slovak">
+<option value="keybcs2_bin" title="捷克斯洛伐克语, 二进制">keybcs2_bin</option>
+<option value="keybcs2_general_ci" title="捷克斯洛伐克语, 不区分大小写">keybcs2_general_ci</option>
+</optgroup>
+<optgroup label="koi8r" title="KOI8-R Relcom Russian">
+<option value="koi8r_bin" title="俄语, 二进制">koi8r_bin</option>
+<option value="koi8r_general_ci" title="俄语, 不区分大小写">koi8r_general_ci</option>
+</optgroup>
+<optgroup label="koi8u" title="KOI8-U Ukrainian">
+<option value="koi8u_bin" title="乌克兰语, 二进制">koi8u_bin</option>
+<option value="koi8u_general_ci" title="乌克兰语, 不区分大小写">koi8u_general_ci</option>
+</optgroup>
+<optgroup label="latin1" title="cp1252 West European">
+<option value="latin1_bin" title="西欧 (多语言), 二进制">latin1_bin</option>
+<option value="latin1_danish_ci" title="丹麦语, 不区分大小写">latin1_danish_ci</option>
+<option value="latin1_general_ci" title="西欧 (多语言), 不区分大小写">latin1_general_ci</option>
+<option value="latin1_general_cs" title="西欧 (多语言), 区分大小写">latin1_general_cs</option>
+<option value="latin1_german1_ci" title="德语 (字典), 不区分大小写">latin1_german1_ci</option>
+<option value="latin1_german2_ci" title="德语 (电话本), 不区分大小写">latin1_german2_ci</option>
+<option value="latin1_spanish_ci" title="西班牙语, 不区分大小写">latin1_spanish_ci</option>
+<option value="latin1_swedish_ci" title="瑞典语, 不区分大小写">latin1_swedish_ci</option>
+</optgroup>
+<optgroup label="latin2" title="ISO 8859-2 Central European">
+<option value="latin2_bin" title="中欧 (多语言), 二进制">latin2_bin</option>
+<option value="latin2_croatian_ci" title="克罗地亚语, 不区分大小写">latin2_croatian_ci</option>
+<option value="latin2_czech_cs" title="捷克语, 区分大小写">latin2_czech_cs</option>
+<option value="latin2_general_ci" title="中欧 (多语言), 不区分大小写">latin2_general_ci</option>
+<option value="latin2_hungarian_ci" title="匈牙利语, 不区分大小写">latin2_hungarian_ci</option>
+</optgroup>
+<optgroup label="latin5" title="ISO 8859-9 Turkish">
+<option value="latin5_bin" title="土耳其语, 二进制">latin5_bin</option>
+<option value="latin5_turkish_ci" title="土耳其语, 不区分大小写">latin5_turkish_ci</option>
+</optgroup>
+<optgroup label="latin7" title="ISO 8859-13 Baltic">
+<option value="latin7_bin" title="巴拉克语 (多语言), 二进制">latin7_bin</option>
+<option value="latin7_estonian_cs" title="爱沙尼亚语, 区分大小写">latin7_estonian_cs</option>
+<option value="latin7_general_ci" title="巴拉克语 (多语言), 不区分大小写">latin7_general_ci</option>
+<option value="latin7_general_cs" title="巴拉克语 (多语言), 区分大小写">latin7_general_cs</option>
+</optgroup>
+<optgroup label="macce" title="Mac Central European">
+<option value="macce_bin" title="中欧 (多语言), 二进制">macce_bin</option>
+<option value="macce_general_ci" title="中欧 (多语言), 不区分大小写">macce_general_ci</option>
+</optgroup>
+<optgroup label="macroman" title="Mac West European">
+<option value="macroman_bin" title="西欧 (多语言), 二进制">macroman_bin</option>
+<option value="macroman_general_ci" title="西欧 (多语言), 不区分大小写">macroman_general_ci</option>
+</optgroup>
+<optgroup label="sjis" title="Shift-JIS Japanese">
+<option value="sjis_bin" title="日语, 二进制">sjis_bin</option>
+<option value="sjis_japanese_ci" title="日语, 不区分大小写">sjis_japanese_ci</option>
+</optgroup>
+<optgroup label="swe7" title="7bit Swedish">
+<option value="swe7_bin" title="瑞典语, 二进制">swe7_bin</option>
+<option value="swe7_swedish_ci" title="瑞典语, 不区分大小写">swe7_swedish_ci</option>
+</optgroup>
+<optgroup label="tis620" title="TIS620 Thai">
+<option value="tis620_bin" title="泰语, 二进制">tis620_bin</option>
+<option value="tis620_thai_ci" title="泰语, 不区分大小写">tis620_thai_ci</option>
+</optgroup>
+<optgroup label="ucs2" title="UCS-2 Unicode">
+<option value="ucs2_bin" title="Unicode (多语言), 二进制">ucs2_bin</option>
+<option value="ucs2_czech_ci" title="捷克语, 不区分大小写">ucs2_czech_ci</option>
+<option value="ucs2_danish_ci" title="丹麦语, 不区分大小写">ucs2_danish_ci</option>
+<option value="ucs2_esperanto_ci" title="世界语, 不区分大小写">ucs2_esperanto_ci</option>
+<option value="ucs2_estonian_ci" title="爱沙尼亚语, 不区分大小写">ucs2_estonian_ci</option>
+<option value="ucs2_general_ci" title="Unicode (多语言), 不区分大小写">ucs2_general_ci</option>
+<option value="ucs2_general_mysql500_ci" title="Unicode (多语言)">ucs2_general_mysql500_ci</option>
+<option value="ucs2_hungarian_ci" title="匈牙利语, 不区分大小写">ucs2_hungarian_ci</option>
+<option value="ucs2_icelandic_ci" title="冰岛语, 不区分大小写">ucs2_icelandic_ci</option>
+<option value="ucs2_latvian_ci" title="拉脱维亚语, 不区分大小写">ucs2_latvian_ci</option>
+<option value="ucs2_lithuanian_ci" title="立陶宛语, 不区分大小写">ucs2_lithuanian_ci</option>
+<option value="ucs2_persian_ci" title="波斯语, 不区分大小写">ucs2_persian_ci</option>
+<option value="ucs2_polish_ci" title="波兰语, 不区分大小写">ucs2_polish_ci</option>
+<option value="ucs2_roman_ci" title="西欧, 不区分大小写">ucs2_roman_ci</option>
+<option value="ucs2_romanian_ci" title="罗马尼亚语, 不区分大小写">ucs2_romanian_ci</option>
+<option value="ucs2_sinhala_ci" title="未知, 不区分大小写">ucs2_sinhala_ci</option>
+<option value="ucs2_slovak_ci" title="斯洛伐克语, 不区分大小写">ucs2_slovak_ci</option>
+<option value="ucs2_slovenian_ci" title="斯洛文尼亚语, 不区分大小写">ucs2_slovenian_ci</option>
+<option value="ucs2_spanish2_ci" title="传统西班牙语, 不区分大小写">ucs2_spanish2_ci</option>
+<option value="ucs2_spanish_ci" title="西班牙语, 不区分大小写">ucs2_spanish_ci</option>
+<option value="ucs2_swedish_ci" title="瑞典语, 不区分大小写">ucs2_swedish_ci</option>
+<option value="ucs2_turkish_ci" title="土耳其语, 不区分大小写">ucs2_turkish_ci</option>
+<option value="ucs2_unicode_ci" title="Unicode (多语言), 不区分大小写">ucs2_unicode_ci</option>
+</optgroup>
+<optgroup label="ujis" title="EUC-JP Japanese">
+<option value="ujis_bin" title="日语, 二进制">ujis_bin</option>
+<option value="ujis_japanese_ci" title="日语, 不区分大小写">ujis_japanese_ci</option>
+</optgroup>
+<optgroup label="utf16" title="UTF-16 Unicode">
+<option value="utf16_bin" title="未知, 二进制">utf16_bin</option>
+<option value="utf16_czech_ci" title="捷克语, 不区分大小写">utf16_czech_ci</option>
+<option value="utf16_danish_ci" title="丹麦语, 不区分大小写">utf16_danish_ci</option>
+<option value="utf16_esperanto_ci" title="世界语, 不区分大小写">utf16_esperanto_ci</option>
+<option value="utf16_estonian_ci" title="爱沙尼亚语, 不区分大小写">utf16_estonian_ci</option>
+<option value="utf16_general_ci" title="未知, 不区分大小写">utf16_general_ci</option>
+<option value="utf16_hungarian_ci" title="匈牙利语, 不区分大小写">utf16_hungarian_ci</option>
+<option value="utf16_icelandic_ci" title="冰岛语, 不区分大小写">utf16_icelandic_ci</option>
+<option value="utf16_latvian_ci" title="拉脱维亚语, 不区分大小写">utf16_latvian_ci</option>
+<option value="utf16_lithuanian_ci" title="立陶宛语, 不区分大小写">utf16_lithuanian_ci</option>
+<option value="utf16_persian_ci" title="波斯语, 不区分大小写">utf16_persian_ci</option>
+<option value="utf16_polish_ci" title="波兰语, 不区分大小写">utf16_polish_ci</option>
+<option value="utf16_roman_ci" title="西欧, 不区分大小写">utf16_roman_ci</option>
+<option value="utf16_romanian_ci" title="罗马尼亚语, 不区分大小写">utf16_romanian_ci</option>
+<option value="utf16_sinhala_ci" title="未知, 不区分大小写">utf16_sinhala_ci</option>
+<option value="utf16_slovak_ci" title="斯洛伐克语, 不区分大小写">utf16_slovak_ci</option>
+<option value="utf16_slovenian_ci" title="斯洛文尼亚语, 不区分大小写">utf16_slovenian_ci</option>
+<option value="utf16_spanish2_ci" title="传统西班牙语, 不区分大小写">utf16_spanish2_ci</option>
+<option value="utf16_spanish_ci" title="西班牙语, 不区分大小写">utf16_spanish_ci</option>
+<option value="utf16_swedish_ci" title="瑞典语, 不区分大小写">utf16_swedish_ci</option>
+<option value="utf16_turkish_ci" title="土耳其语, 不区分大小写">utf16_turkish_ci</option>
+<option value="utf16_unicode_ci" title="Unicode (多语言), 不区分大小写">utf16_unicode_ci</option>
+</optgroup>
+<optgroup label="utf32" title="UTF-32 Unicode">
+<option value="utf32_bin" title="未知, 二进制">utf32_bin</option>
+<option value="utf32_czech_ci" title="捷克语, 不区分大小写">utf32_czech_ci</option>
+<option value="utf32_danish_ci" title="丹麦语, 不区分大小写">utf32_danish_ci</option>
+<option value="utf32_esperanto_ci" title="世界语, 不区分大小写">utf32_esperanto_ci</option>
+<option value="utf32_estonian_ci" title="爱沙尼亚语, 不区分大小写">utf32_estonian_ci</option>
+<option value="utf32_general_ci" title="未知, 不区分大小写">utf32_general_ci</option>
+<option value="utf32_hungarian_ci" title="匈牙利语, 不区分大小写">utf32_hungarian_ci</option>
+<option value="utf32_icelandic_ci" title="冰岛语, 不区分大小写">utf32_icelandic_ci</option>
+<option value="utf32_latvian_ci" title="拉脱维亚语, 不区分大小写">utf32_latvian_ci</option>
+<option value="utf32_lithuanian_ci" title="立陶宛语, 不区分大小写">utf32_lithuanian_ci</option>
+<option value="utf32_persian_ci" title="波斯语, 不区分大小写">utf32_persian_ci</option>
+<option value="utf32_polish_ci" title="波兰语, 不区分大小写">utf32_polish_ci</option>
+<option value="utf32_roman_ci" title="西欧, 不区分大小写">utf32_roman_ci</option>
+<option value="utf32_romanian_ci" title="罗马尼亚语, 不区分大小写">utf32_romanian_ci</option>
+<option value="utf32_sinhala_ci" title="未知, 不区分大小写">utf32_sinhala_ci</option>
+<option value="utf32_slovak_ci" title="斯洛伐克语, 不区分大小写">utf32_slovak_ci</option>
+<option value="utf32_slovenian_ci" title="斯洛文尼亚语, 不区分大小写">utf32_slovenian_ci</option>
+<option value="utf32_spanish2_ci" title="传统西班牙语, 不区分大小写">utf32_spanish2_ci</option>
+<option value="utf32_spanish_ci" title="西班牙语, 不区分大小写">utf32_spanish_ci</option>
+<option value="utf32_swedish_ci" title="瑞典语, 不区分大小写">utf32_swedish_ci</option>
+<option value="utf32_turkish_ci" title="土耳其语, 不区分大小写">utf32_turkish_ci</option>
+<option value="utf32_unicode_ci" title="Unicode (多语言), 不区分大小写">utf32_unicode_ci</option>
+</optgroup>
+<optgroup label="utf8" title="UTF-8 Unicode">
+<option value="utf8_bin" title="Unicode (多语言), 二进制">utf8_bin</option>
+<option value="utf8_czech_ci" title="捷克语, 不区分大小写">utf8_czech_ci</option>
+<option value="utf8_danish_ci" title="丹麦语, 不区分大小写">utf8_danish_ci</option>
+<option value="utf8_esperanto_ci" title="世界语, 不区分大小写">utf8_esperanto_ci</option>
+<option value="utf8_estonian_ci" title="爱沙尼亚语, 不区分大小写">utf8_estonian_ci</option>
+<option value="utf8_general_ci" title="Unicode (多语言), 不区分大小写">utf8_general_ci</option>
+<option value="utf8_general_mysql500_ci" title="Unicode (多语言)">utf8_general_mysql500_ci</option>
+<option value="utf8_hungarian_ci" title="匈牙利语, 不区分大小写">utf8_hungarian_ci</option>
+<option value="utf8_icelandic_ci" title="冰岛语, 不区分大小写">utf8_icelandic_ci</option>
+<option value="utf8_latvian_ci" title="拉脱维亚语, 不区分大小写">utf8_latvian_ci</option>
+<option value="utf8_lithuanian_ci" title="立陶宛语, 不区分大小写">utf8_lithuanian_ci</option>
+<option value="utf8_persian_ci" title="波斯语, 不区分大小写">utf8_persian_ci</option>
+<option value="utf8_polish_ci" title="波兰语, 不区分大小写">utf8_polish_ci</option>
+<option value="utf8_roman_ci" title="西欧, 不区分大小写">utf8_roman_ci</option>
+<option value="utf8_romanian_ci" title="罗马尼亚语, 不区分大小写">utf8_romanian_ci</option>
+<option value="utf8_sinhala_ci" title="未知, 不区分大小写">utf8_sinhala_ci</option>
+<option value="utf8_slovak_ci" title="斯洛伐克语, 不区分大小写">utf8_slovak_ci</option>
+<option value="utf8_slovenian_ci" title="斯洛文尼亚语, 不区分大小写">utf8_slovenian_ci</option>
+<option value="utf8_spanish2_ci" title="传统西班牙语, 不区分大小写">utf8_spanish2_ci</option>
+<option value="utf8_spanish_ci" title="西班牙语, 不区分大小写">utf8_spanish_ci</option>
+<option value="utf8_swedish_ci" title="瑞典语, 不区分大小写">utf8_swedish_ci</option>
+<option value="utf8_turkish_ci" title="土耳其语, 不区分大小写">utf8_turkish_ci</option>
+<option value="utf8_unicode_ci" title="Unicode (多语言), 不区分大小写">utf8_unicode_ci</option>
+</optgroup>
+<optgroup label="utf8mb4" title="UTF-8 Unicode">
+<option value="utf8mb4_bin" title="未知, 二进制">utf8mb4_bin</option>
+<option value="utf8mb4_czech_ci" title="捷克语, 不区分大小写">utf8mb4_czech_ci</option>
+<option value="utf8mb4_danish_ci" title="丹麦语, 不区分大小写">utf8mb4_danish_ci</option>
+<option value="utf8mb4_esperanto_ci" title="世界语, 不区分大小写">utf8mb4_esperanto_ci</option>
+<option value="utf8mb4_estonian_ci" title="爱沙尼亚语, 不区分大小写">utf8mb4_estonian_ci</option>
+<option value="utf8mb4_general_ci" title="未知, 不区分大小写">utf8mb4_general_ci</option>
+<option value="utf8mb4_hungarian_ci" title="匈牙利语, 不区分大小写">utf8mb4_hungarian_ci</option>
+<option value="utf8mb4_icelandic_ci" title="冰岛语, 不区分大小写">utf8mb4_icelandic_ci</option>
+<option value="utf8mb4_latvian_ci" title="拉脱维亚语, 不区分大小写">utf8mb4_latvian_ci</option>
+<option value="utf8mb4_lithuanian_ci" title="立陶宛语, 不区分大小写">utf8mb4_lithuanian_ci</option>
+<option value="utf8mb4_persian_ci" title="波斯语, 不区分大小写">utf8mb4_persian_ci</option>
+<option value="utf8mb4_polish_ci" title="波兰语, 不区分大小写">utf8mb4_polish_ci</option>
+<option value="utf8mb4_roman_ci" title="西欧, 不区分大小写">utf8mb4_roman_ci</option>
+<option value="utf8mb4_romanian_ci" title="罗马尼亚语, 不区分大小写">utf8mb4_romanian_ci</option>
+<option value="utf8mb4_sinhala_ci" title="未知, 不区分大小写">utf8mb4_sinhala_ci</option>
+<option value="utf8mb4_slovak_ci" title="斯洛伐克语, 不区分大小写">utf8mb4_slovak_ci</option>
+<option value="utf8mb4_slovenian_ci" title="斯洛文尼亚语, 不区分大小写">utf8mb4_slovenian_ci</option>
+<option value="utf8mb4_spanish2_ci" title="传统西班牙语, 不区分大小写">utf8mb4_spanish2_ci</option>
+<option value="utf8mb4_spanish_ci" title="西班牙语, 不区分大小写">utf8mb4_spanish_ci</option>
+<option value="utf8mb4_swedish_ci" title="瑞典语, 不区分大小写">utf8mb4_swedish_ci</option>
+<option value="utf8mb4_turkish_ci" title="土耳其语, 不区分大小写">utf8mb4_turkish_ci</option>
+<option value="utf8mb4_unicode_ci" title="Unicode (多语言), 不区分大小写">utf8mb4_unicode_ci</option>
+</optgroup>
+</select>
+            <noscript><input type="submit" value="执行" /></noscript>
+        </form>
+    </li>
+</ul></div><div class="group"><h2>外观设置</h2>  <ul><li id="li_select_lang">
+<form method="post" action="<?=__PUBLIC__.'phpmyadmin/'?>index.php" target="_parent">
+    <input type="hidden" name="db" value=""><input type="hidden" name="table" value=""><input type="hidden" name="token" value="b7534a2f84aac02c07d2f166ae0e88a9"><bdo xml:lang="en" dir="ltr">语言 - <em>Language</em><a href="<?=__PUBLIC__.'phpmyadmin/'?>Documentation.html#faq7_2" target="documentation"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="文档" alt="文档" class="icon ic_b_help"></a>:</bdo>
+    <select name="lang" class="autosubmit" xml:lang="en" dir="ltr">
+            <option value="en">English</option>
+        <option value="en_GB">English (United Kingdom)</option>
+        <option value="zh_CN" selected="selected">中文 - Chinese simplified</option>
+        <option value="zh_TW">中文 - Chinese traditional</option>
+
+    </select>
+    
+    <noscript>
+    
+        <input type="submit" value="Go" />
+    
+    </noscript>
+</form>
+    </li><li id="li_select_theme"><form name="setTheme" method="post" action="<?=__PUBLIC__.'phpmyadmin/'?>index.php" target="_parent"><input type="hidden" name="token" value="b7534a2f84aac02c07d2f166ae0e88a9"><a href="<?=__PUBLIC__.'phpmyadmin/'?>themes.php" target="themes" class="themeselect">主题</a>:
+<select name="set_theme" xml:lang="en" dir="ltr" class="autosubmit"><option value="original">Original</option><option value="pmahomme" selected="selected">pmahomme</option></select><noscript><input type="submit" value="执行" /></noscript></form></li><li id="li_select_fontsize"><form name="form_fontsize_selection" id="form_fontsize_selection" method="post" action="<?=__PUBLIC__.'phpmyadmin/'?>index.php" target="_parent">
+<input type="hidden" name="token" value="b7534a2f84aac02c07d2f166ae0e88a9">
+<label for="select_fontsize">字号:</label>
+<select name="set_fontsize" id="select_fontsize" class="autosubmit">
+<option value="32%">32%</option>
+<option value="42%">42%</option>
+<option value="52%">52%</option>
+<option value="62%">62%</option>
+<option value="72%">72%</option>
+<option value="77%">77%</option>
+<option value="78%">78%</option>
+<option value="79%">79%</option>
+<option value="80%">80%</option>
+<option value="81%">81%</option>
+<option value="82%" selected="selected">82%</option>
+<option value="83%">83%</option>
+<option value="84%">84%</option>
+<option value="85%">85%</option>
+<option value="86%">86%</option>
+<option value="87%">87%</option>
+<option value="92%">92%</option>
+<option value="102%">102%</option>
+<option value="112%">112%</option>
+<option value="122%">122%</option>
+<option value="132%">132%</option>
+</select>
+<noscript>
+<input type="submit" value="执行" />
+</noscript>
+</form></li></ul><ul><li id="li_user_preferences"><a href="<?=__PUBLIC__.'phpmyadmin/'?>prefs_manage.php?token=b7534a2f84aac02c07d2f166ae0e88a9">更多设置</a>
+</li></ul></div></div><div id="main_pane_right"><div class="group"><h2>数据库服务器</h2><ul>
+<li id="li_server_info">服务器: localhost via TCP/IP</li><li id="li_server_type">软件: MySQL</li><li id="li_server_version">软件版本: 5.5.53 - MySQL Community Server (GPL)</li><li id="li_mysql_proto">协议版本: 10</li><li id="li_user_info">用户: root@localhost</li>    <li id="li_select_mysql_charset">        服务器字符集:         <span xml:lang="en" dir="ltr">           UTF-8 Unicode
+           (utf8)
+        </span>
+    </li>
+  </ul> </div><div class="group"><h2>网站服务器</h2><ul><li id="li_web_server_software">nginx/1.11.5</li><li id="li_mysql_client_version">数据库客户端版本: libmysql - mysqlnd 5.0.8-dev - 20102224 - $Id: 731e5b87ba42146a687c29995d2dfd8b4e40b325 $</li><li id="li_used_php_extension">PHP 扩展: mysqli <a href="<?=__PUBLIC__.'phpmyadmin/'?>url.php?url=http%3A%2F%2Fphp.net%2Fmanual%2Fen%2Fbook.mysqli.php&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="documentation"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="文档" alt="文档" class="icon ic_b_help"></a></li>  </ul> </div><div class="group pmagroup"><h2>phpMyAdmin</h2><ul><li id="li_pma_version" class="jsversioncheck">版本信息: phpStudy 2014</li><li id="phpStudy 2014"><a href="http://www.phpstudy.net/" target="_blank">phpStudy 2014</a>
+</li><li id="li_pma_wiki"><a href="<?=__PUBLIC__.'phpmyadmin/'?>url.php?url=http%3A%2F%2Fwiki.phpmyadmin.net%2F&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_blank">维基 (Wiki) (外链，英文)</a>
+</li><li id="li_pma_homepage"><a href="<?=__PUBLIC__.'phpmyadmin/'?>url.php?url=http%3A%2F%2Fwww.phpMyAdmin.net%2F&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_blank">官方主页 (外链，英文)</a>
+</li><li id="li_pma_support"><a href="<?=__PUBLIC__.'phpmyadmin/'?>url.php?url=http%3A%2F%2Fwww.phpmyadmin.net%2Fhome_page%2Fsupport.php&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_blank">获取支持</a>
+</li>    </ul>
+ </div>
+
+</div>
+
+<br class="clearfloat">
+<br class="clearfloat">
+</div>
+
+<noscript><div class="error">你的浏览器不支持或禁用了 Javascript，部分 phpMyAdmin 功能将不可用。如导航框架将不能自动刷新。</div></noscript><script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+// updates current settings
+if (window.parent.setAll) {
+    window.parent.setAll('zh_CN', '', '1', '', '', 'b7534a2f84aac02c07d2f166ae0e88a9');
+}
+    // set current db, table and sql query in the querywindow
+if (window.parent.reload_querywindow) {
+    window.parent.reload_querywindow(
+        '',
+        '',
+        '');
+}
+    
+if (window.parent.frame_content) {
+    // reset content frame name, as querywindow needs to set a unique name
+    // before submitting form data, and navigation frame needs the original name
+    if (typeof(window.parent.frame_content.name) != 'undefined'
+     && window.parent.frame_content.name != 'frame_content') {
+        window.parent.frame_content.name = 'frame_content';
+    }
+    if (typeof(window.parent.frame_content.id) != 'undefined'
+     && window.parent.frame_content.id != 'frame_content') {
+        window.parent.frame_content.id = 'frame_content';
+    }
+    //window.parent.frame_content.setAttribute('name', 'frame_content');
+    //window.parent.frame_content.setAttribute('id', 'frame_content');
+}
+});
+
+//]]>
+</script>
+<div id="selflink" class="print_ignore">
+<script type="text/javascript">
+//<![CDATA[
+
+/* Store current location in hash part of URL to allow direct bookmarking */
+setURLHash("server=1&target=main.php&token=b7534a2f84aac02c07d2f166ae0e88a9");
+
+//]]>
+</script>
+<a href="<?=__PUBLIC__.'phpmyadmin/'?>index.php?server=1&amp;target=main.php&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" title="打开新 phpMyAdmin 窗口" target="_blank"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="打开新 phpMyAdmin 窗口" alt="打开新 phpMyAdmin 窗口" class="icon ic_window-new"></a>
+</div>
+
+
+</body></html>

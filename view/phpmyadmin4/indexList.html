@@ -1,0 +1,43 @@
+<div class="list_container" style="">
+    <ul>
+        <li class="new_index italics">
+            <div class="block"><i></i><span class="hide pos2_name">tables</span><span
+                    class="hide pos2_value">0</span><span class="hide pos3_name">indexes</span><span
+                    class="hide pos3_value">0</span></div>
+            <div class="block "><a class=" ajax"
+                                   href="tbl_indexes.php?server=1&amp;create_index=1&amp;added_fields=2&amp;db=test&amp;table=ali_users&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"><img
+                    src="<?=__PUBLIC__.'phpmyadmin4/'?>dot.gif" title="新建" alt="新建" class="icon ic_b_index_add"></a></div>
+            <a class="hover_show_full ajax"
+               href="tbl_indexes.php?server=1&amp;create_index=1&amp;added_fields=2&amp;db=test&amp;table=ali_users&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"
+               title="">新建</a>
+            <div class="clearfloat"></div>
+        </li>
+
+        <?php foreach($result as $key=>$value) { ?>
+        <li class="index">
+            <div class="block"><i></i><span class="hide pos2_name">tables</span><span
+                    class="hide pos2_value">0</span><span class="hide pos3_name">indexes</span><span
+                    class="hide pos3_value">0</span></div>
+            <div class="block "><a class=" ajax"
+                                   href="tbl_indexes.php?server=1&amp;db=test&amp;table=ali_users&amp;index=cert_no&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"><img
+                    src="<?=__PUBLIC__.'phpmyadmin4/'?>dot.gif" title="索引" alt="索引" class="icon ic_b_index"></a></div>
+            <a class="hover_show_full ajax"
+               href="tbl_indexes.php?server=1&amp;db=test&amp;table=ali_users&amp;index=cert_no&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"
+               title=""><?=$value['Column_name']?></a>
+            <div class="clearfloat"></div>
+        </li>
+       <?php } ?>
+        <!--<li class="last index">-->
+            <!--<div class="block"><i></i><span class="hide pos2_name">tables</span><span-->
+                    <!--class="hide pos2_value">0</span><span class="hide pos3_name">indexes</span><span-->
+                    <!--class="hide pos3_value">0</span></div>-->
+            <!--<div class="block "><a class=" ajax"-->
+                                   <!--href="tbl_indexes.php?server=1&amp;db=test&amp;table=ali_users&amp;index=uni_aliuser_aliuscrapid&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"><img-->
+                    <!--src="<?=__PUBLIC__.'phpmyadmin4/'?>dot.gif" title="索引" alt="索引" class="icon ic_b_index"></a></div>-->
+            <!--<a class="hover_show_full ajax"-->
+               <!--href="tbl_indexes.php?server=1&amp;db=test&amp;table=ali_users&amp;index=uni_aliuser_aliuscrapid&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"-->
+               <!--title="">uni_aliuser_aliuscrapid</a>-->
+            <!--<div class="clearfloat"></div>-->
+        <!--</li>-->
+    </ul>
+</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://localhost/phpmyadmin/navigation.php?token=b7534a2f84aac02c07d2f166ae0e88a9 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="<?=__PUBLIC__.'phpmyadmin/'?>favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?=__PUBLIC__.'phpmyadmin/'?>favicon.ico" type="image/x-icon">
+    <title>phpMyAdmin</title>
+    
+    <!--<base target="frame_content">--><base href="." target="frame_content">
+    <link rel="stylesheet" type="text/css" href="<?=__PUBLIC__.'phpmyadmin/'?>phpmyadmin.css">
+    <script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery-1.6.2+fix-9521.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery-ui-1.8.16.custom.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>jquery.qtip-1.0.0-rc3.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>navigation.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>functions.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>message.js" type="text/javascript"></script>
+<script src="<?=__PUBLIC__.'phpmyadmin/'?>get_image.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    // <![CDATA[
+    // INIT PMA_setFrameSize
+    var onloadCnt = 0;
+    var onLoadHandler = window.onload;
+    var resizeHandler = window.onresize;
+    window.document.onresize  = resizeHandler;
+    window.onload = function() {
+        if (onloadCnt == 0) {
+            if (typeof(onLoadHandler) == "function") {
+                onLoadHandler();
+            }
+            if (typeof(PMA_setFrameSize) != 'undefined' && typeof(PMA_setFrameSize) == 'function') {
+                PMA_setFrameSize();
+            }
+            onloadCnt++;
+        }
+    };
+    window.onresize = function() {
+        if (typeof(resizeHandler) == "function") {
+            resizeHandler();
+        }
+        if (typeof(PMA_saveFrameSize) != 'undefined' && typeof(PMA_saveFrameSize) == 'function') {
+            PMA_saveFrameSize();
+        }
+    };
+    // ]]>
+    </script>
+        <!--[if IE 6]>
+    <style type="text/css">
+    /* <![CDATA[ */
+    html {
+        overflow-y: scroll;
+    }
+    /* ]]> */
+    </style>
+    <![endif]-->
+</head>
+
+<body id="body_leftFrame">
+<div id="pmalogo">
+<a href="http://localhost/phpmyadmin/main.php?token=b7534a2f84aac02c07d2f166ae0e88a9" target="frame_content"><img src="<?=__PUBLIC__.'phpmyadmin/'?>logo_left.png" alt="phpMyAdmin" id="imgpmalogo"></a>
+</div>
+<div id="leftframelinks">
+<a href="http://localhost/phpmyadmin/main.php?token=b7534a2f84aac02c07d2f166ae0e88a9" title="主页"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="主页" alt="主页" class="icon ic_b_home"></a>
+<a href="http://localhost/phpmyadmin/index.php?token=b7534a2f84aac02c07d2f166ae0e88a9&amp;old_usr=root" target="_parent" title="退出"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="退出" alt="退出" class="icon ic_s_loggoff"></a>
+<a href="http://localhost/phpmyadmin/querywindow.php?token=b7534a2f84aac02c07d2f166ae0e88a9&amp;no_js=true" title="查询窗口" onclick="if (window.parent.open_querywindow()) return false;"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="查询窗口" alt="查询窗口" class="icon ic_b_selboard"></a>
+    <a href="http://localhost/phpmyadmin/Documentation.html" target="documentation" title="phpMyAdmin 文档"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="phpMyAdmin 文档" alt="phpMyAdmin 文档" class="icon ic_b_docs"></a><a href="http://localhost/phpmyadmin/url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.5%2Fen%2Findex.html&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="mysql_doc"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="文档" alt="文档" class="icon ic_b_sqlhelp"></a>
+<a href="http://localhost/phpmyadmin/navigation.php??uniqid=5b8c93122027e&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" title="刷新导航框架" target="frame_navigation"><img src="<?=__PUBLIC__.'phpmyadmin/'?>dot.gif" title="刷新导航框架" alt="刷新导航框架" class="icon ic_s_reload"></a></div>
+<div id="recentTableList">
+<form method="post" action="http://localhost/phpmyadmin/index.php" target="_parent">
+<input type="hidden" name="token" value="b7534a2f84aac02c07d2f166ae0e88a9">
+<input type="hidden" name="goto" id="LeftDefaultTabTable" value="tbl_structure.php"><select name="selected_recent_table" id="recentTable"><option value="">(最近使用的表) ...</option><option value="">没有最近使用的表</option></select><noscript>
+<input type="submit" name="Go" value="执行" />
+</noscript>
+</form>
+</div>
+<ul id="databaseList" xml:lang="en" dir="ltr">
+<li><a href="http://localhost/phpmyadmin/index.php?db=demo&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">demo</a></li>
+<li><a href="http://localhost/phpmyadmin/index.php?db=government&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">government</a></li>
+<li><a href="http://localhost/phpmyadmin/index.php?db=hx_company&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">hx_company</a></li>
+<li><a href="http://localhost/phpmyadmin/index.php?db=information_schema&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">information_schema</a></li>
+<li><a href="http://localhost/phpmyadmin/index.php?db=mysql&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">mysql</a></li>
+<li><a href="http://localhost/phpmyadmin/index.php?db=performance_schema&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">performance_schema</a></li>
+<li><a href="http://localhost/phpmyadmin/index.php?db=test&amp;token=b7534a2f84aac02c07d2f166ae0e88a9" target="_parent">test</a></li>
+</ul>
+
+<div id="left_tableList">
+</div>
+</body></html>

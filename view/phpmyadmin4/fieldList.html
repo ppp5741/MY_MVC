@@ -1,0 +1,44 @@
+<div class="list_container" style="">
+    <ul>
+        <li class="new_column italics">
+            <div class="block"><i></i><span class="hide pos2_name">tables</span><span
+                    class="hide pos2_value">0</span><span class="hide pos3_name">columns</span><span
+                    class="hide pos3_value">0</span></div>
+            <div class="block "><a
+                    href="tbl_addfield.php?server=1&amp;db=test&amp;table=ali_users&amp;field_where=last&amp;after_field=&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"><img
+                    src="<?=__PUBLIC__.'phpmyadmin4/'?>dot.gif" title="新建" alt="新建" class="icon ic_b_column_add"></a></div>
+            <a class="hover_show_full"
+               href="tbl_addfield.php?server=1&amp;db=test&amp;table=ali_users&amp;field_where=last&amp;after_field=&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"
+               title="">新建</a>
+            <div class="clearfloat"></div>
+        </li>
+
+        <?php foreach($result as $key=>$value) { ?>
+           <li class="">
+            <div class="block"><i></i><span class="hide pos2_name">tables</span><span
+                    class="hide pos2_value">0</span><span class="hide pos3_name">columns</span><span
+                    class="hide pos3_value">0</span></div>
+            <div class="block "><a
+                    href="tbl_structure.php?server=1&amp;db=test&amp;table=ali_users&amp;field=account_id&amp;change_column=1&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"><img
+                    src="<?=__PUBLIC__.'phpmyadmin4/'?>dot.gif" title="字段" alt="字段" class="icon ic_pause"></a></div>
+            <a class="hover_show_full"
+               href="tbl_structure.php?server=1&amp;db=test&amp;table=ali_users&amp;field=account_id&amp;change_column=1&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"
+               title="结构"><?=$value['Field']?></a>
+            <div class="clearfloat"></div>
+        </li>
+        <?php } ?>
+
+        <!--<li class="last">-->
+            <!--<div class="block"><i></i><span class="hide pos2_name">tables</span><span-->
+                    <!--class="hide pos2_value">0</span><span class="hide pos3_name">columns</span><span-->
+                    <!--class="hide pos3_value">0</span></div>-->
+            <!--<div class="block "><a-->
+                    <!--href="tbl_structure.php?server=1&amp;db=test&amp;table=ali_users&amp;field=user_type_value&amp;change_column=1&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"><img-->
+                    <!--src="<?=__PUBLIC__.'phpmyadmin4/'?>dot.gif" title="字段" alt="字段" class="icon ic_pause"></a></div>-->
+            <!--<a class="hover_show_full"-->
+               <!--href="tbl_structure.php?server=1&amp;db=test&amp;table=ali_users&amp;field=user_type_value&amp;change_column=1&amp;token=a35ff9e09d3de68d9fc0f2aa393d42ee"-->
+               <!--title="结构">user_type_value</a>-->
+            <!--<div class="clearfloat"></div>-->
+        <!--</li>-->
+    </ul>
+</div>
